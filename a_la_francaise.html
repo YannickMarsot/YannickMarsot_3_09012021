@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>A la française</title>
-    </head>
- 
-    <body>
-       <!-------------------Header-------------->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/612c8c18de.js" crossorigin="anonymous"></script>
+    <title>A la française</title>
+</head>
+
+<body>
+    <div id="bloc_page">
+        <!-------------------Header-------------->
         <header>
-            <h1>Ohmyfood</h1>
-            <img>
+            <img id="logo" src="images/logo/ohmyfood.png" alt="logo">
+            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant">
         </header>
-        
+
         <!-----------------menu------------------>
         <main>
             <h2>à la française</h2>
-            
+            <a href="#"><i id="visible" class="far fa-heart"></i></a>
+            <a href="#"><i id="hidden" class="fas fa-heart"></i></a>
+
             <div id="starter">
-                <h3>entrée</h3>
-                <div class="starter-dishes"></div>
-                <div class="starter-dishes"></div>
-                <div class="starter-dishes"></div>
+                <h3>ENTREE</h3>
+                <div class="starter-dishes">
+                    <a href="#">
+                        <h3>Tartare de poulpe acidulé</h3>
+                        <p>Aux zeste d'orange 25€</p>
+                    </a>
+                </div>
+                <div class="starter-dishes">
+                    <a href="#">
+                        <h3>Velouté de légumes d'antan</h3>
+                        <p>Carotte, persils, topinambour 35€</p>
+                    </a>
+                </div>
+                <div class="starter-dishes">
+                    <a href="#">
+                        <h3>Soupe à l'oignon</h3>
+                        <p>Revisitée 20€</p>
+                    </a>
+
+                </div>
             </div>
-            
+
             <div id="main-dish">
-                <div class="main-dishes"></div>
-                <div class="main-dishes"></div>
-                <div class="main-dishes"></div>
+                <h3>PLATS</h3>
+                <div class="main-dishes">
+                    <a href="#">
+                        <h3>Coquilles Saint-Jacques</h3>
+                        <p>Accopagnées d'une purée de panais 40€</p>
+                    </a>
+                </div>
+                <div class="main-dishes">
+                    <a href="#">
+                        <h3>Magret de canard</h3>
+                        <p>Et parmentier de pommes de terres 35€</p>
+                    </a>
+                </div>
+                <div class="main-dishes">
+                    <a href="#">
+                        <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                        <p>Sur son lit de gnocchis aux légumes 44€</p>
+                    </a>
+                </div>
             </div>
-            
+
             <div id="dessert">
-                <div class="dessert-dishes"></div>
-                <div class="dessert-dishes"></div>
-                <div class="dessert-dishes"></div>
+                <h3>DESSERTS</h3>
+                <div class="dessert-dishes">
+                    <a href="#">
+                        <h3>Pétales de viollettes glacés</h3>
+                        <p>Et purée de noisettes 18€</p>
+                    </a>
+                </div>
+                <div class="dessert-dishes">
+                    <a href="#">
+                        <h3>Fondant au chocolat</h3>
+                        <p>Revisité 22€</p>
+                    </a>
+                </div>
+                <div class="dessert-dishes">
+                    <a href="#">
+                        <h3>Millefeuille croustillant</h3>
+                        <p>Myrtilles et pâte d'amande 23€</p>
+                    </a>
+                </div>
+            </div>
+
+            <div id="Shop">
+                <a id="Shop_button" href="#">Commander</a>
             </div>
         </main>
-        
+
         <!-------------bas de page------------>
         <footer>
-            <h2>Ohmyfood</h2>
+            <h3>ohmyfood</h3>
             <ul>
-                <li><a>Proposer un restaurant</a></li>
-                <li><a>Devenir partenaire</a></li>
-                <li><a>Mention légale</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir Partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </footer>
-        
-    </body>
+    </div>
+</body>
+
 </html>
