@@ -1,0 +1,13 @@
+/*____________Affichage telephone___________*/
+
+@media screen and (max-width:425px) {
+
+    /* _______________éléments principaux________________ */
+
+    #bloc_page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
