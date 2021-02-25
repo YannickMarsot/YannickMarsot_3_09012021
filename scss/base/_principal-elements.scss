@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', 'arial', sans-serif;
+    color: #181818;
+    width: auto;
+    position: relative;
+
+    #bloc_page {
+        max-width: 1440px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
