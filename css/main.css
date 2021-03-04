@@ -1,0 +1,173 @@
+/*violet*/
+/*rose*/
+/*bleu*/
+/*blanc*/
+body #bloc_page {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body ul {
+  list-style-type: none;
+}
+body a {
+  text-decoration: none;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Roboto", "arial", sans-serif;
+  color: #181818;
+  width: auto;
+}
+
+#explore__button {
+  height: 25px;
+  width: 190px;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  border-bottom-style: hidden;
+  background-color: #9356DC;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.restaurants {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 4px 10px 8px #F2F2F2;
+  margin-bottom: 30px;
+}
+.restaurants img {
+  object-fit: cover;
+  width: 98%;
+  height: 150px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header #title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header #title #logo {
+    width: 120px;
+    background-color: white;
+  }
+  header #title p {
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: lightgray;
+    font-size: 1.2em;
+  }
+  header #explore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: lightgray;
+  }
+  header #explore h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+  header #explore p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  header nav ul a {
+    font-size: 1.2em;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: black;
+  width: 98%;
+  padding-left: 15px;
+}
+footer h3 {
+  color: white;
+  font-size: 1.2em;
+  font-family: "Shrikhand", "arial", "sans-serif";
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+footer ul {
+  padding-left: 0px;
+}
+footer ul li {
+  margin-bottom: 5px;
+}
+footer ul li i {
+  margin-right: 7px;
+}
+footer ul li a {
+  color: white;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,13 +1,5 @@
-__button {
-height: 60px;
-    width: 60px;
-    text-align: center;
-    color: $color-primary;
-    line-height: 60px;
-    border-bottom-style: hidden;
-    background-color: $color-primary;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+#explore {
+    &__button {
+        @include button (25px, 190px, white, $color-primary, 30px)
+    }
 }

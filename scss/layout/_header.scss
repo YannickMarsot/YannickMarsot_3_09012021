@@ -1,83 +1,51 @@
 header {
-    @include respond-to;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    @include respond-to ("handhelds") {
+        @include flex (column, center);
 
-    tittle {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
 
-        #logo {
-            width: 110px;
-            max-height: 40px;
-            background-color: white;
-        }
+        #title {
+            @include flex (column, center);
 
-        p {
-            background-color: grey;
-            font-size: 1.2em;
-        }
-    }
+            #logo {
+                width: 120px;
+                background-color: white;
+            }
 
-    explore {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        background-color: grey;
-
-        h2 {
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            font-size: 2em;
-        }
-
-        p {
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            font-size: 1.2em;
-        }
-    }
-
-    nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-
-        ul {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-
-            a {
+            p {
+                width: 320px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: lightgray;
                 font-size: 1.2em;
+            }
+        }
+
+        #explore {
+            @include flex (column, center);
+
+            background-color: lightgray;
+
+            h2 {
+                text-align: center;
+                font-size: 2em;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1.2em;
+            }
+        }
+
+        nav {
+            @include flex (column, center);
+
+            ul {
+                @include flex (column);
+
+                a {
+                    font-size: 1.2em;
+                }
             }
         }
     }

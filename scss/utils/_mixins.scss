@@ -1,17 +1,53 @@
 // reponsive
-$break-small: 425px
-$break-large: 1024px
+$break-small: 425px;
+$break-large: 1024px;
 
-@mixin respond-to($media)
-	@if $media == handhelds
-		@media only screen and (max-width: $break-small)
-			@content
+@mixin respond-to($media) {
+    @if $media==handhelds {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
 
-	@else if $media == medium-screens
-		@media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1)
-			@content
+    @else if $media==medium-screens {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
 
-	@else if $media == wide-screens
-		@media only screen and (min-width: $break-large)
-			@content
-  
+    @else if $media==wide-screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}
+
+@mixin flex ($direction, $align:false) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+
+    @if $align {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: $align;
+    }
+}
+
+@mixin button ($height, $width, $color, $background-color, $radius) {
+    height: $height;
+    width: $width;
+    text-align: center;
+    color: $color;
+    line-height: $height;
+    border-bottom-style: hidden;
+    background-color: $background-color;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
