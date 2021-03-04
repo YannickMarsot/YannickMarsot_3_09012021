@@ -14,6 +14,10 @@ body a {
   text-decoration: none;
 }
 
+main {
+  background-color: #F2F2F2;
+}
+
 html {
   margin: 0px;
   padding: 0px;
@@ -40,14 +44,15 @@ body {
 }
 
 .restaurants {
+  width: 98%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  box-shadow: 4px 10px 8px #F2F2F2;
+  box-shadow: 4px 10px 8px #c1c1c1;
   margin-bottom: 30px;
 }
 .restaurants img {
   object-fit: cover;
-  width: 98%;
+  width: 100%;
   height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -87,7 +92,7 @@ body {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: lightgray;
+    background-color: #F2F2F2;
     font-size: 1.2em;
   }
   header #explore {
@@ -101,7 +106,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: lightgray;
+    background-color: #F2F2F2;
   }
   header #explore h2 {
     text-align: center;
