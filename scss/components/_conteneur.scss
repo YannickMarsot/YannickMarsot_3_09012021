@@ -1,0 +1,14 @@
+.restaurants {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 4px 10px 8px #F2F2F2;
+    margin-bottom: 30px;
+
+    img {
+        object-fit: cover;
+        width: 98%;
+        height: 150px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
