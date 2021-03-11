@@ -1,5 +1,46 @@
 #explore {
     &__button {
-        @include button (25px, 190px, white, $color-primary, 30px)
+        @include button (50px, 210px, white, $color-secondary, 30px);
+        background: linear-gradient($color-secondary, $color-primary);
     }
+}
+
+
+.fonctionnement {
+    &__button {
+        padding-left: 15px;
+        padding-right: 15px;
+    
+        i {
+            color: #c1c1c1;
+            margin-right: 20px;
+        }
+
+        span {
+            height: 22px;
+            width: 22px;
+            text-align: center;
+            line-height: 22px;
+            border-bottom-style: hidden;
+            background-color: $color-primary;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            position: absolute;
+            left: -12px;
+            top: 14px;
+            color: white;
+            font-size: 0.8em;
+        }
+    }
+}
+
+nav li {
+    @include button (50px, 380px, black, white, 15px);
+    border-style: hidden;
+    margin-bottom: 20px;
+    box-shadow: 4px 10px 8px #c1c1c1;
+    position: relative;
+    background-color: #F6F6F6;
 }
