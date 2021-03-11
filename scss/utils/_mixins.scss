@@ -32,8 +32,8 @@ $break-large: 1024px;
     flex-direction: $direction;
 
     @if $align {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        -webkit-box-align: $align;
+        -ms-flex-align: $align;
         align-items: $align;
     }
 }

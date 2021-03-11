@@ -1,52 +1,62 @@
 header {
-    @include respond-to ("handhelds") {
+
+    @include flex (column, center);
+
+    #logo {
+        width: 120px;
+        background-color: white;
+    }
+
+
+    #title {
+        @include flex (column, center);
+        background-color: #EAEAEA;
+        width: 425px;
+        
+            p {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.2em;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+    #explore {
         @include flex (column, center);
 
+        background-color: #F6F6F6;
+        width: 425px;
+        height: 300px;
 
-        #title {
-            @include flex (column, center);
-
-            #logo {
-                width: 120px;
-                background-color: white;
-            }
-
-            p {
-                width: 320px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-                background-color: #F2F2F2;
-                font-size: 1.2em;
-            }
+        h2 {
+            text-align: center;
+            font-size: 2em;
         }
 
-        #explore {
-            @include flex (column, center);
-
-            background-color: #F2F2F2;
-
-            h2 {
-                text-align: center;
-                font-size: 2em;
-            }
-
-            p {
-                text-align: center;
-                font-size: 1.2em;
-            }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
+        
+    }
 
-        nav {
-            @include flex (column, center);
+    nav {
+        @include flex (column, center);
 
-            ul {
-                @include flex (column);
+        ul {
+            @include flex (column);
 
-                a {
-                    font-size: 1.2em;
-                }
+            a {
+                font-size: 1.2em;
+                color: black;
             }
         }
     }
+
 }
