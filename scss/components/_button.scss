@@ -13,7 +13,11 @@
     
         i {
             color: #c1c1c1;
-            margin-right: 20px;
+        }
+        
+        .icone {
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         span {
@@ -37,7 +41,7 @@
 }
 
 nav li {
-    @include button (50px, 380px, black, white, 15px);
+    @include button (50px, auto, black, white, 15px);
     border-style: hidden;
     margin-bottom: 20px;
     box-shadow: 4px 10px 8px #c1c1c1;

@@ -12,10 +12,21 @@ body ul {
 }
 body a {
   text-decoration: none;
+  /*color: black;*/
 }
 
 main {
   background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html {
@@ -54,7 +65,10 @@ body {
 }
 .fonctionnement__button i {
   color: #c1c1c1;
-  margin-right: 20px;
+}
+.fonctionnement__button .icone {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .fonctionnement__button span {
   height: 22px;
@@ -76,7 +90,7 @@ body {
 
 nav li {
   height: 50px;
-  width: 380px;
+  width: auto;
   text-align: center;
   color: black;
   line-height: 50px;
@@ -94,7 +108,7 @@ nav li {
 }
 
 .restaurants {
-  width: 98%;
+  width: 85%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 4px 10px 8px #c1c1c1;
@@ -106,6 +120,39 @@ nav li {
   height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+.restaurants .description {
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.restaurants .description h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+.restaurants .description p {
+  color: black;
+}
+.restaurants .description .far.fa-heart {
+  position: absolute;
+  font-size: 1.5em;
+  color: black;
+  top: 10px;
+  right: 50px;
+}
+.restaurants .description .far.fa-heart:hover {
+  opacity: 0;
+}
+.restaurants .description .fas.fa-heart {
+  opacity: 0;
+  position: absolute;
+  font-size: 1.5em;
+  top: 10px;
+  right: 50px;
+}
+.restaurants .description .fas.fa-heart:hover {
+  opacity: 1;
+  color: linear-gradient(#9356DC, #FF79DA);
 }
 
 header {
@@ -121,22 +168,12 @@ header {
   align-items: center;
 }
 header #logo {
-  width: 120px;
+  width: 160px;
   background-color: white;
 }
 header #title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  width: 100%;
   background-color: #EAEAEA;
-  width: 425px;
 }
 header #title p {
   height: 50px;
@@ -159,8 +196,8 @@ header #explore {
   -ms-flex-align: center;
   align-items: center;
   background-color: #F6F6F6;
-  width: 425px;
-  height: 300px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 header #explore h2 {
   text-align: center;
@@ -182,6 +219,9 @@ header nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
 }
 header nav ul {
   display: -webkit-box;
@@ -193,6 +233,7 @@ header nav ul {
   flex-direction: column;
 }
 header nav ul a {
+  display: flex;
   font-size: 1.2em;
   color: black;
 }
@@ -206,7 +247,6 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #353535;
-  width: 98%;
   padding-left: 15px;
 }
 footer h3 {
