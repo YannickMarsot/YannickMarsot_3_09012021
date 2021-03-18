@@ -12,9 +12,11 @@ body {
     
     a{
         text-decoration: none;
+        /*color: black;*/
     }
 }
 
 main {
     background-color: #F6F6F6;
+    @include flex (column, center);
 }
