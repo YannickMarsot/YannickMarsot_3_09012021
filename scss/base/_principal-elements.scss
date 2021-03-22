@@ -1,5 +1,5 @@
 body {
-    
+
     #bloc_page {
         max-width: 425px;
         margin-left: auto;
@@ -9,8 +9,8 @@ body {
     ul {
         list-style-type: none;
     }
-    
-    a{
+
+    a {
         text-decoration: none;
         /*color: black;*/
     }
@@ -19,4 +19,12 @@ body {
 main {
     background-color: #F6F6F6;
     @include flex (column, center);
+}
+
+.subpage {
+    background-color: #F6F6F6;
+    @include flex (column);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-bottom: 80px;
 }

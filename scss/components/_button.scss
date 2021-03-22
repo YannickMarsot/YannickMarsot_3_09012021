@@ -10,11 +10,11 @@
     &__button {
         padding-left: 15px;
         padding-right: 15px;
-    
+
         i {
             color: #c1c1c1;
         }
-        
+
         .icone {
             margin-left: 10px;
             margin-right: 10px;
@@ -48,4 +48,39 @@ nav li {
     position: relative;
     background-color: #F6F6F6;
     font-size: 0.9em;
+}
+
+.dishes {
+    @include button (60px, 100%, black, white, 15px);
+    border-style: hidden;
+    margin-bottom: 20px;
+    box-shadow: 4px 10px 8px #c1c1c1;
+    background-color: white;
+    text-align: start;
+    line-height: 30%;
+    padding-top: 10px;
+    padding-left: 10px;
+
+    a {
+        color: black;
+
+        h3 {
+            font-size: 1em;
+        }
+
+        p {
+            margin-top: 0px;
+        }
+    }
+}
+
+#shop {
+    @include button (50px, 200px, white, $color-secondary, 30px);
+    background: linear-gradient($color-secondary, $color-primary);
+    margin-top: 50px;
+
+    a {
+        color: white;
+    }
+
 }
