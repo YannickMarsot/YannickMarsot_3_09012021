@@ -17,7 +17,7 @@
         position: relative;
         padding-left: 10px;
         padding-bottom: 10px;
-        
+
         h3 {
             color: black;
             margin-bottom: 10px;
@@ -34,9 +34,13 @@
             top: 10px;
             right: 50px;
 
-            &:hover {
-                opacity: 0;
-            }
+        }
+
+        .fas.fa-heart:hover ~ .far.fa-heart {
+            color: white;
+            opacity: 0 !important;
+            z-index: -5;
+
         }
 
         .fas.fa-heart {
@@ -45,10 +49,18 @@
             font-size: 1.5em;
             top: 10px;
             right: 50px;
-            
+
             &:hover {
-            opacity: 1;
-            color: linear-gradient($color-primary, $color-secondary);    
+                /*.far.fa-heart {
+                    color: white;
+                    opacity: 0 !important;
+                    z-index: -5;
+                }*/
+
+                opacity: 1;
+                background: linear-gradient(#9356DC, #FF79DA);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
             }
         }
     }
