@@ -33,35 +33,17 @@
             color: black;
             top: 10px;
             right: 50px;
-
-        }
-
-        .fas.fa-heart:hover ~ .far.fa-heart {
-            color: white;
-            opacity: 0 !important;
-            z-index: -5;
-
-        }
-
-        .fas.fa-heart {
-            opacity: 0;
-            position: absolute;
-            font-size: 1.5em;
-            top: 10px;
-            right: 50px;
-
             &:hover {
-                /*.far.fa-heart {
-                    color: white;
-                    opacity: 0 !important;
-                    z-index: -5;
-                }*/
-
-                opacity: 1;
+                font-weight: bold;
                 background: linear-gradient(#9356DC, #FF79DA);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
             }
+
         }
+
+    
     }
 }
+
+/*coeur font-weight: bold avec background: linear et kit transparent*/ 
