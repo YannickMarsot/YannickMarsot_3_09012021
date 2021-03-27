@@ -1,11 +1,13 @@
 header {
 
     @include flex (column, center);
+    position: relative;
     
     .arrow {
         color: black;
         position: absolute;
-        top: 25px;
+        font-size: 1.5em;
+        top: 10px;
         left: 45px;
     }
 

@@ -42,6 +42,23 @@ main {
   border-top-right-radius: 30px;
   padding-bottom: 80px;
 }
+.subpage #title-container {
+  width: 80%;
+  position: relative;
+}
+.subpage #title-container .far.fa-heart {
+  position: absolute;
+  font-size: 1.5em;
+  color: black;
+  top: 20px;
+  right: 10px;
+}
+.subpage #title-container .far.fa-heart:hover {
+  font-weight: bold;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 
 html {
   margin: 0px;
@@ -60,6 +77,25 @@ body {
 
 .subpage h1 {
   font-family: "Shrikhand", "arial", "sans-serif";
+  font-size: 1.5em;
+  /*text-align: left;*/
+}
+.subpage h2 {
+  font-size: 1em;
+}
+
+#starter,
+#main-dish,
+#dessert {
+  position: relative;
+}
+#starter .underline,
+#main-dish .underline,
+#dessert .underline {
+  border-top: solid #99E2D0 4px;
+  width: 10%;
+  position: absolute;
+  top: 35px;
 }
 
 #explore__button {
@@ -216,7 +252,6 @@ nav li {
   -webkit-background-clip: text;
 }
 
-/*coeur font-weight: bold avec background: linear et kit transparent*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,11 +263,13 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 header .arrow {
   color: black;
   position: absolute;
-  top: 25px;
+  font-size: 1.5em;
+  top: 10px;
   left: 45px;
 }
 header #logo {

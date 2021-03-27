@@ -27,4 +27,22 @@ main {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding-bottom: 80px;
+    #title-container {
+      width: 80%;
+        position: relative;
+        .far.fa-heart {
+            position: absolute;
+            font-size: 1.5em;
+            color: black;
+            top: 20px;
+            right: 10px;
+            &:hover {
+                font-weight: bold;
+                background: linear-gradient(#9356DC, #FF79DA);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+
+        } 
+    }
 }

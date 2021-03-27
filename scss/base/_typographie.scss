@@ -9,6 +9,26 @@ body {
 
     h1 {
         font-family: "Shrikhand", "arial", "sans-serif";
+        font-size: 1.5em;
+        /*text-align: left;*/
+    }
+    
+    h2 {
+        font-size: 1em;
     }
 
+
+}
+
+#starter,
+#main-dish,
+#dessert {
+    position: relative;
+
+    .underline {
+        border-top: solid $color-third 4px;
+        width: 10%;
+        position: absolute;
+        top: 35px;
+    }
 }
