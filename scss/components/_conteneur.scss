@@ -4,6 +4,7 @@
     border-bottom-right-radius: 15px;
     box-shadow: 4px 10px 8px #c1c1c1;
     margin-bottom: 30px;
+    position: relative;
 
     img {
         object-fit: cover;
@@ -11,6 +12,16 @@
         height: 150px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+    }
+    
+    span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $color-third;
+        padding: 5px;
+        font-weight: bold;
+        color: lightseagreen;
     }
 
     .description {

@@ -218,6 +218,7 @@ nav li {
   border-bottom-right-radius: 15px;
   box-shadow: 4px 10px 8px #c1c1c1;
   margin-bottom: 30px;
+  position: relative;
 }
 .restaurants img {
   object-fit: cover;
@@ -225,6 +226,15 @@ nav li {
   height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+.restaurants span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  padding: 5px;
+  font-weight: bold;
+  color: lightseagreen;
 }
 .restaurants .description {
   position: relative;
