@@ -1,0 +1,37 @@
+/*-- animation selection de plat --*/
+
+main {
+    .dishes {
+        a {
+            &:active {
+                .icone-animation {
+                    transform: scaleX(1);
+
+                    .far.fa-check {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            p {
+                display: flex;
+                text-overflow: ellipsis;
+                justify-content: space-between;
+
+                span {
+                    display: inline-block;
+                }
+
+                .icone-animation {
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    transition: transform 1200ms;
+                    background-color: $color-third;
+                }
+            }
+        }
+    }
+}
+
+
+/*-- animation menu qui apparaissent --*/

@@ -2,6 +2,29 @@
 /*rose*/
 /*bleu*/
 /*blanc*/
+/*-- animation selection de plat --*/
+main .dishes a:active .icone-animation {
+  transform: scaleX(1);
+}
+main .dishes a:active .icone-animation .far.fa-check {
+  transform: rotate(180deg);
+}
+main .dishes a p {
+  display: flex;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+}
+main .dishes a p span {
+  display: inline-block;
+}
+main .dishes a p .icone-animation {
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 1200ms;
+  background-color: #99E2D0;
+}
+
+/*-- animation menu qui apparaissent --*/
 body #bloc_page {
   max-width: 425px;
   margin-left: auto;
