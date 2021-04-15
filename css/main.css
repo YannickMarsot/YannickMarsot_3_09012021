@@ -3,25 +3,51 @@
 /*bleu*/
 /*blanc*/
 /*-- animation selection de plat --*/
-main .dishes a:active .icone-animation {
-  transform: scaleX(1);
-}
-main .dishes a:active .icone-animation .far.fa-check {
-  transform: rotate(180deg);
-}
-main .dishes a p {
+main a .dishes {
   display: flex;
-  text-overflow: ellipsis;
   justify-content: space-between;
 }
-main .dishes a p span {
-  display: inline-block;
+main a .dishes:hover .icone-animation {
+  transform: scaleX(1);
 }
-main .dishes a p .icone-animation {
+main a .dishes:hover .icone-animation .fas.fa-check-circle {
+  transform: rotate(0deg);
+}
+main a .dishes:hover .description {
+  transform: scaleX(0.9);
+}
+main a .dishes .description {
+  position: relative;
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 400ms;
+}
+main a .dishes .description p {
+  text-overflow: ellipsis;
+}
+main a .dishes .description .prix {
+  position: absolute;
+  top: 41px;
+  right: -32px;
+}
+main a .dishes .icone-animation {
   transform-origin: right;
   transform: scaleX(0);
-  transition: transform 1200ms;
+  transition: transform 400ms;
   background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-overflow: hidden;
+}
+main a .dishes .icone-animation .fas.fa-check-circle {
+  transform: rotate(-180deg);
+  transition: transform 600ms;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+  margin-right: 5px;
+  margin-left: 5px;
+  line-height: 60px;
 }
 
 /*-- animation menu qui apparaissent --*/
@@ -203,8 +229,14 @@ nav li {
   background-color: white;
   text-align: start;
   line-height: 30%;
-  padding-top: 10px;
   padding-left: 10px;
+  /* .description {
+         margin-top: 10px;
+         margin-bottom: 10px;
+
+
+
+     }*/
 }
 .dishes a {
   color: black;

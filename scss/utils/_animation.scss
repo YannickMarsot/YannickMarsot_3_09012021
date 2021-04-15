@@ -1,32 +1,62 @@
 /*-- animation selection de plat --*/
 
 main {
-    .dishes {
-        a {
-            &:active {
+    a {
+
+        .dishes {
+            display: flex;
+            justify-content: space-between;
+
+            &:hover {
                 .icone-animation {
                     transform: scaleX(1);
 
-                    .far.fa-check {
-                        transform: rotate(180deg);
+                    .fas.fa-check-circle {
+                        transform: rotate(0deg);
                     }
+                }
+                
+                .description {
+                    transform: scaleX(0.90);
                 }
             }
 
-            p {
-                display: flex;
-                text-overflow: ellipsis;
-                justify-content: space-between;
+            .description {
+                position: relative;
+                transform-origin: left;
+                transform: scaleX(1);
+                transition: transform 400ms;
 
-                span {
-                    display: inline-block;
+                p {
+                    text-overflow: ellipsis;
+                }
+                
+                .prix {
+                    position: absolute;
+                    top: 41px;
+                    right: -32px;
                 }
 
-                .icone-animation {
-                    transform-origin: right;
-                    transform: scaleX(0);
-                    transition: transform 1200ms;
-                    background-color: $color-third;
+            }
+
+            .icone-animation {
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 400ms;
+                background-color: $color-third;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                text-overflow: hidden;
+
+                .fas.fa-check-circle {
+                    transform: rotate(-180deg);
+                    transition: transform 600ms;
+                    font-weight: bold;
+                    color: white;
+                    font-size: 1.5em;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    line-height: 60px;
                 }
             }
         }
