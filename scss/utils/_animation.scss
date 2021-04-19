@@ -15,22 +15,26 @@ main {
                         transform: rotate(0deg);
                     }
                 }
-                
+
                 .description {
-                    transform: scaleX(0.90);
+                    width: 80%;
+
+
+                    p {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                 }
             }
 
             .description {
                 position: relative;
                 transform-origin: left;
-                transform: scaleX(1);
-                transition: transform 400ms;
+                width: 100%;
+                transition: width 400ms;
 
-                p {
-                    text-overflow: ellipsis;
-                }
-                
+
                 .prix {
                     position: absolute;
                     top: 41px;
@@ -65,3 +69,83 @@ main {
 
 
 /*-- animation menu qui apparaissent --*/
+
+$num-dishes: 12;
+$anim-dur: 1000ms;
+$anim-delay: 150ms;
+
+.dishes {
+    animation: apparition $anim-dur;
+
+    @for $i from 1 through $num-dishes {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+}
+
+@keyframes apparition {
+
+    0% {
+        transform: translate(0px, 10px);
+        opacity: .1;
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*-- spinner --*/
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/*#bloc_page {
+    visibility: hidden;
+    animation: spinner 5s ease-out infinite;
+}
+
+@keyframes spinner {
+
+    to {
+        visibility: visible;
+        100% .lds-dual-ring {
+            visibility: hidden;
+        }
+    }
+}*/

@@ -14,16 +14,18 @@ main a .dishes:hover .icone-animation .fas.fa-check-circle {
   transform: rotate(0deg);
 }
 main a .dishes:hover .description {
-  transform: scaleX(0.9);
+  width: 80%;
+}
+main a .dishes:hover .description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main a .dishes .description {
   position: relative;
   transform-origin: left;
-  transform: scaleX(1);
-  transition: transform 400ms;
-}
-main a .dishes .description p {
-  text-overflow: ellipsis;
+  width: 100%;
+  transition: width 400ms;
 }
 main a .dishes .description .prix {
   position: absolute;
@@ -51,6 +53,102 @@ main a .dishes .icone-animation .fas.fa-check-circle {
 }
 
 /*-- animation menu qui apparaissent --*/
+.dishes {
+  animation: apparition 1000ms;
+}
+.dishes--1 {
+  animation-delay: 150ms;
+}
+.dishes--2 {
+  animation-delay: 300ms;
+}
+.dishes--3 {
+  animation-delay: 450ms;
+}
+.dishes--4 {
+  animation-delay: 600ms;
+}
+.dishes--5 {
+  animation-delay: 750ms;
+}
+.dishes--6 {
+  animation-delay: 900ms;
+}
+.dishes--7 {
+  animation-delay: 1050ms;
+}
+.dishes--8 {
+  animation-delay: 1200ms;
+}
+.dishes--9 {
+  animation-delay: 1350ms;
+}
+.dishes--10 {
+  animation-delay: 1500ms;
+}
+.dishes--11 {
+  animation-delay: 1650ms;
+}
+.dishes--12 {
+  animation-delay: 1800ms;
+}
+
+@keyframes apparition {
+  0% {
+    transform: translate(0px, 10px);
+    opacity: 0.1;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/*-- spinner --*/
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*#bloc_page {
+    visibility: hidden;
+    animation: spinner 5s ease-out infinite;
+}
+
+@keyframes spinner {
+
+    to {
+        visibility: visible;
+        100% .lds-dual-ring {
+            visibility: hidden;
+        }
+    }
+}*/
 body #bloc_page {
   max-width: 425px;
   margin-left: auto;
@@ -212,11 +310,11 @@ nav li {
 }
 
 .dishes {
-  height: 60px;
+  height: 80px;
   width: 100%;
   text-align: center;
   color: black;
-  line-height: 60px;
+  line-height: 10px;
   border-bottom-style: hidden;
   background-color: white;
   border-top-left-radius: 15px;
@@ -228,7 +326,6 @@ nav li {
   box-shadow: 4px 10px 8px #c1c1c1;
   background-color: white;
   text-align: start;
-  line-height: 30%;
   padding-left: 10px;
   /* .description {
          margin-top: 10px;

@@ -38,12 +38,12 @@ $break-large: 1024px;
     }
 }
 
-@mixin button ($height, $width, $color, $background-color, $radius) {
+@mixin button ($height, $width, $color, $background-color, $radius, $line-height) {
     height: $height;
     width: $width;
     text-align: center;
     color: $color;
-    line-height: $height;
+    line-height: $line-height;
     border-bottom-style: hidden;
     background-color: $background-color;
     border-top-left-radius: $radius;
