@@ -29,8 +29,8 @@ main a .dishes .description {
 }
 main a .dishes .description .prix {
   position: absolute;
-  top: 41px;
-  right: -32px;
+  top: 51px;
+  right: -24px;
 }
 main a .dishes .icone-animation {
   transform-origin: right;
@@ -49,7 +49,7 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   font-size: 1.5em;
   margin-right: 5px;
   margin-left: 5px;
-  line-height: 60px;
+  line-height: 80px;
 }
 
 /*-- animation menu qui apparaissent --*/
@@ -113,6 +113,7 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: -999 !important;
 }
 
 .lds-dual-ring:after {
@@ -135,20 +136,21 @@ main a .dishes .icone-animation .fas.fa-check-circle {
     transform: rotate(360deg);
   }
 }
-/*#bloc_page {
-    visibility: hidden;
-    animation: spinner 5s ease-out infinite;
+#bloc_page {
+  background-color: white;
+  z-index: -99 !important;
+  visibility: hidden;
+  animation: spinner ease-out;
+  animation-delay: 5s;
+  animation-duration: 100ms;
+  animation-fill-mode: both;
 }
 
 @keyframes spinner {
-
-    to {
-        visibility: visible;
-        100% .lds-dual-ring {
-            visibility: hidden;
-        }
-    }
-}*/
+  to {
+    visibility: visible;
+  }
+}
 body #bloc_page {
   max-width: 425px;
   margin-left: auto;
@@ -308,13 +310,17 @@ nav li {
   background-color: #F6F6F6;
   font-size: 0.9em;
 }
+nav li:hover {
+  background-color: white;
+  box-shadow: 6px 12px 8px #c1c1c1;
+}
 
 .dishes {
   height: 80px;
   width: 100%;
   text-align: center;
   color: black;
-  line-height: 10px;
+  line-height: 13px;
   border-bottom-style: hidden;
   background-color: white;
   border-top-left-radius: 15px;

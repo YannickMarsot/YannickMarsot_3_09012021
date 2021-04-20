@@ -37,8 +37,8 @@ main {
 
                 .prix {
                     position: absolute;
-                    top: 41px;
-                    right: -32px;
+                    top: 51px;
+                    right: -24px;
                 }
 
             }
@@ -60,7 +60,7 @@ main {
                     font-size: 1.5em;
                     margin-right: 5px;
                     margin-left: 5px;
-                    line-height: 60px;
+                    line-height: 80px;
                 }
             }
         }
@@ -110,6 +110,7 @@ $anim-delay: 150ms;
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: -999 !important;
 }
 
 .lds-dual-ring:after {
@@ -135,17 +136,19 @@ $anim-delay: 150ms;
 
 }
 
-/*#bloc_page {
+#bloc_page {
+    background-color: white;
+    z-index: -99 !important;
     visibility: hidden;
-    animation: spinner 5s ease-out infinite;
+    animation: spinner ease-out;
+    animation-delay: 5s;
+    animation-duration: 100ms;
+    animation-fill-mode: both;
 }
 
 @keyframes spinner {
 
     to {
-        visibility: visible;
-        100% .lds-dual-ring {
-            visibility: hidden;
-        }
+       visibility: visible;
     }
-}*/
+}
