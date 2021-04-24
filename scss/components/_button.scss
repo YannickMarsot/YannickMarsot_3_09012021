@@ -1,6 +1,6 @@
 #explore {
     &__button {
-        @include button (50px, 210px, white, $color-secondary, 30px);
+        @include button (50px, 210px, white, $color-secondary, 30px, 50px);
         background: linear-gradient($color-secondary, $color-primary);
     }
 }
@@ -41,25 +41,35 @@
 }
 
 nav li {
-    @include button (50px, auto, black, white, 15px);
+    @include button (50px, auto, black, white, 15px, 50px);
     border-style: hidden;
     margin-bottom: 20px;
     box-shadow: 4px 10px 8px #c1c1c1;
     position: relative;
     background-color: #F6F6F6;
     font-size: 0.9em;
+    &:hover {
+        background-color: white;
+        box-shadow: 6px 12px 8px #c1c1c1;
+    }
 }
 
 .dishes {
-    @include button (60px, 100%, black, white, 15px);
+    @include button (80px, 90%, black, white, 15px, 13px);
     border-style: hidden;
     margin-bottom: 20px;
     box-shadow: 4px 10px 8px #c1c1c1;
     background-color: white;
     text-align: start;
-    line-height: 30%;
-    padding-top: 10px;
     padding-left: 10px;
+
+ /* .description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        
+        
+    }*/
 
     a {
         color: black;
@@ -75,7 +85,7 @@ nav li {
 }
 
 #shop {
-    @include button (50px, 200px, white, $color-secondary, 30px);
+    @include button (50px, 200px, white, $color-secondary, 30px, 50px);
     background: linear-gradient($color-secondary, $color-primary);
     margin-top: 50px;
 

@@ -2,10 +2,252 @@
 /*rose*/
 /*bleu*/
 /*blanc*/
+/*-- animation selection de plat --*/
+main a .dishes {
+  display: flex;
+  justify-content: space-between;
+}
+main a .dishes:hover .icone-animation {
+  transform: scaleX(1);
+}
+main a .dishes:hover .icone-animation .fas.fa-check-circle {
+  transform: rotate(0deg);
+}
+main a .dishes:hover .description {
+  width: 80%;
+}
+main a .dishes:hover .description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main a .dishes .description {
+  position: relative;
+  transform-origin: left;
+  width: 100%;
+  transition: width 400ms;
+}
+main a .dishes .description .prix {
+  position: absolute;
+  top: 51px;
+  right: -24px;
+}
+main a .dishes .icone-animation {
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 400ms;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /*text-overflow: hidden;*/
+}
+main a .dishes .icone-animation .fas.fa-check-circle {
+  transform: rotate(-180deg);
+  transition: transform 600ms;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+  margin-right: 5px;
+  margin-left: 5px;
+  line-height: 80px;
+}
+
+/*-- animation menu qui apparaissent --*/
+.dishes {
+  animation: apparition 1000ms;
+}
+.dishes--1 {
+  animation-delay: 3150ms;
+}
+.dishes--2 {
+  animation-delay: 3300ms;
+}
+.dishes--3 {
+  animation-delay: 3450ms;
+}
+.dishes--4 {
+  animation-delay: 3600ms;
+}
+.dishes--5 {
+  animation-delay: 3750ms;
+}
+.dishes--6 {
+  animation-delay: 3900ms;
+}
+.dishes--7 {
+  animation-delay: 4050ms;
+}
+.dishes--8 {
+  animation-delay: 4200ms;
+}
+.dishes--9 {
+  animation-delay: 4350ms;
+}
+.dishes--10 {
+  animation-delay: 4500ms;
+}
+.dishes--11 {
+  animation-delay: 4650ms;
+}
+.dishes--12 {
+  animation-delay: 4800ms;
+}
+
+@keyframes apparition {
+  0% {
+    transform: translate(0px, 10px);
+    opacity: 0.1;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/*-- spinner --*/
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -999 !important;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#bloc_page {
+  background-color: white;
+  z-index: -99 !important;
+  position: relative;
+  visibility: hidden;
+  animation: spinner ease-out;
+  animation-delay: 3s;
+  animation-duration: 100ms;
+  animation-fill-mode: both;
+}
+
+@keyframes spinner {
+  to {
+    visibility: visible;
+  }
+}
 body #bloc_page {
-  max-width: 425px;
+  /*max-width: $break-small;*/
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 426px) and (max-width: 1023px) {
+  body #bloc_page nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  body #bloc_page nav ul li {
+    height: 80px;
+    width: auto;
+    text-align: center;
+    color: black;
+    line-height: 80px;
+    border-bottom-style: hidden;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: 20px;
+  }
+  body #bloc_page nav ul li a span {
+    top: 0px;
+  }
+  body #bloc_page nav ul li a .icone {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: absolute;
+    top: 23px;
+    left: 96px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body #bloc_page nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  body #bloc_page nav ul li {
+    height: 80px;
+    width: auto;
+    text-align: center;
+    color: black;
+    line-height: 80px;
+    border-bottom-style: hidden;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: 20px;
+  }
+  body #bloc_page nav ul li a span {
+    top: 0px;
+  }
+  body #bloc_page nav ul li a .icone {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: absolute;
+    top: 23px;
+    left: 96px;
+  }
+  body #bloc_page #bloc_page {
+    max-width: 1440px;
+  }
+  body #bloc_page main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
+  body #bloc_page main h2 {
+    position: absolute;
+    top: 570px;
+  }
+  body #bloc_page main .restaurants {
+    width: 20%;
+  }
 }
 body ul {
   list-style-type: none;
@@ -41,6 +283,7 @@ main {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding-bottom: 80px;
+  width: 100%;
 }
 .subpage #title-container {
   width: 80%;
@@ -58,6 +301,11 @@ main {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.subpage #starter,
+.subpage #main-dish,
+.subpage #dessert {
+  width: 100%;
 }
 
 html {
@@ -161,13 +409,17 @@ nav li {
   background-color: #F6F6F6;
   font-size: 0.9em;
 }
+nav li:hover {
+  background-color: white;
+  box-shadow: 6px 12px 8px #c1c1c1;
+}
 
 .dishes {
-  height: 60px;
-  width: 100%;
+  height: 80px;
+  width: 90%;
   text-align: center;
   color: black;
-  line-height: 60px;
+  line-height: 13px;
   border-bottom-style: hidden;
   background-color: white;
   border-top-left-radius: 15px;
@@ -179,9 +431,14 @@ nav li {
   box-shadow: 4px 10px 8px #c1c1c1;
   background-color: white;
   text-align: start;
-  line-height: 30%;
-  padding-top: 10px;
   padding-left: 10px;
+  /* .description {
+         margin-top: 10px;
+         margin-bottom: 10px;
+
+
+
+     }*/
 }
 .dishes a {
   color: black;
@@ -252,8 +509,8 @@ nav li {
   position: absolute;
   font-size: 1.5em;
   color: black;
-  top: 10px;
-  right: 50px;
+  top: 25px;
+  right: 20px;
 }
 .restaurants .description .far.fa-heart:hover {
   font-weight: bold;
@@ -293,6 +550,7 @@ header .main-img {
   width: 100%;
   height: 315px;
   margin-bottom: -50px !important;
+  position: relative;
   z-index: -1 !important;
 }
 header #title {

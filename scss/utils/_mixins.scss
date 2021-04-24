@@ -12,12 +12,85 @@ $break-large: 1024px;
     @else if $media==medium-screens {
         @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
             @content;
+
+            nav {
+                ul {
+                    @include flex (row);
+
+                    li {
+                        @include button (80px, auto, black, white, 15px, 80px);
+                        margin-right: 20px;
+
+                        a {
+                            span {
+                                top: 0px;
+                            }
+
+                            .icone {
+                                margin-left: 0px;
+                                margin-right: 0px;
+                                position: absolute;
+                                top: 23px;
+                                left: 96px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     @else if $media==wide-screens {
         @media only screen and (min-width: $break-large) {
             @content;
+
+            nav {
+                ul {
+                    @include flex (row);
+
+                    li {
+                        @include button (80px, auto, black, white, 15px, 80px);
+                        margin-right: 20px;
+
+                        a {
+                            span {
+                                top: 0px;
+                            }
+
+                            .icone {
+                                margin-left: 0px;
+                                margin-right: 0px;
+                                position: absolute;
+                                top: 23px;
+                                left: 96px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            #bloc_page {
+                max-width: 1440px;
+            }
+            
+            main {
+                @include flex (row);
+                justify-content: space-around;
+                padding-top: 50px;
+                
+                h2 {
+                    position: absolute;
+                    top: 570px;
+                }
+                
+                .restaurants {
+                    width: 20%;
+                }
+                
+                .subpage {
+                    
+                }
+            }
         }
     }
 }
@@ -38,12 +111,12 @@ $break-large: 1024px;
     }
 }
 
-@mixin button ($height, $width, $color, $background-color, $radius) {
+@mixin button ($height, $width, $color, $background-color, $radius, $line-height) {
     height: $height;
     width: $width;
     text-align: center;
     color: $color;
-    line-height: $height;
+    line-height: $line-height;
     border-bottom-style: hidden;
     background-color: $background-color;
     border-top-left-radius: $radius;

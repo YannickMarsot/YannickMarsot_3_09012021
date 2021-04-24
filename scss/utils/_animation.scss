@@ -1,0 +1,158 @@
+/*-- animation selection de plat --*/
+
+main {
+    a {
+
+        .dishes {
+            display: flex;
+            justify-content: space-between;
+
+            &:hover {
+                .icone-animation {
+                    transform: scaleX(1);
+
+                    .fas.fa-check-circle {
+                        transform: rotate(0deg);
+                    }
+                }
+
+                .description {
+                    width: 80%;
+
+
+                    p {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .description {
+                position: relative;
+                transform-origin: left;
+                width: 100%;
+                transition: width 400ms;
+
+
+                .prix {
+                    position: absolute;
+                    top: 51px;
+                    right: -24px;
+                }
+
+            }
+
+            .icone-animation {
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 400ms;
+                background-color: $color-third;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                /*text-overflow: hidden;*/
+
+                .fas.fa-check-circle {
+                    transform: rotate(-180deg);
+                    transition: transform 600ms;
+                    font-weight: bold;
+                    color: white;
+                    font-size: 1.5em;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    line-height: 80px;
+                }
+            }
+        }
+    }
+}
+
+
+/*-- animation menu qui apparaissent --*/
+
+$num-dishes: 12;
+$anim-dur: 1000ms;
+$anim-delay: 3150ms;
+
+.dishes {
+    animation: apparition $anim-dur;
+
+    @for $i from 1 through $num-dishes {
+        &--#{$i} {
+            animation-delay: $anim-delay ;
+        }
+        
+        $anim-delay: $anim-delay + 150ms; 
+    }
+}
+
+@keyframes apparition {
+
+    0% {
+        transform: translate(0px, 10px);
+        opacity: .1;
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*-- spinner --*/
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999 !important;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+#bloc_page {
+    background-color: white;
+    z-index: -99 !important;
+    position: relative;
+    visibility: hidden;
+    animation: spinner ease-out;
+    animation-delay: 3s;
+    animation-duration: 100ms;
+    animation-fill-mode: both;
+}
+
+@keyframes spinner {
+
+    to {
+        visibility: visible;
+    }
+}
