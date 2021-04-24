@@ -39,7 +39,7 @@ main a .dishes .icone-animation {
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  text-overflow: hidden;
+  /*text-overflow: hidden;*/
 }
 main a .dishes .icone-animation .fas.fa-check-circle {
   transform: rotate(-180deg);
@@ -57,40 +57,40 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   animation: apparition 1000ms;
 }
 .dishes--1 {
-  animation-delay: 150ms;
+  animation-delay: 3150ms;
 }
 .dishes--2 {
-  animation-delay: 300ms;
+  animation-delay: 3300ms;
 }
 .dishes--3 {
-  animation-delay: 450ms;
+  animation-delay: 3450ms;
 }
 .dishes--4 {
-  animation-delay: 600ms;
+  animation-delay: 3600ms;
 }
 .dishes--5 {
-  animation-delay: 750ms;
+  animation-delay: 3750ms;
 }
 .dishes--6 {
-  animation-delay: 900ms;
+  animation-delay: 3900ms;
 }
 .dishes--7 {
-  animation-delay: 1050ms;
+  animation-delay: 4050ms;
 }
 .dishes--8 {
-  animation-delay: 1200ms;
+  animation-delay: 4200ms;
 }
 .dishes--9 {
-  animation-delay: 1350ms;
+  animation-delay: 4350ms;
 }
 .dishes--10 {
-  animation-delay: 1500ms;
+  animation-delay: 4500ms;
 }
 .dishes--11 {
-  animation-delay: 1650ms;
+  animation-delay: 4650ms;
 }
 .dishes--12 {
-  animation-delay: 1800ms;
+  animation-delay: 4800ms;
 }
 
 @keyframes apparition {
@@ -113,6 +113,7 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -999 !important;
 }
 
@@ -139,9 +140,10 @@ main a .dishes .icone-animation .fas.fa-check-circle {
 #bloc_page {
   background-color: white;
   z-index: -99 !important;
+  position: relative;
   visibility: hidden;
   animation: spinner ease-out;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-duration: 100ms;
   animation-fill-mode: both;
 }
@@ -152,9 +154,100 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   }
 }
 body #bloc_page {
-  max-width: 425px;
+  /*max-width: $break-small;*/
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 426px) and (max-width: 1023px) {
+  body #bloc_page nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  body #bloc_page nav ul li {
+    height: 80px;
+    width: auto;
+    text-align: center;
+    color: black;
+    line-height: 80px;
+    border-bottom-style: hidden;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: 20px;
+  }
+  body #bloc_page nav ul li a span {
+    top: 0px;
+  }
+  body #bloc_page nav ul li a .icone {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: absolute;
+    top: 23px;
+    left: 96px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body #bloc_page nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  body #bloc_page nav ul li {
+    height: 80px;
+    width: auto;
+    text-align: center;
+    color: black;
+    line-height: 80px;
+    border-bottom-style: hidden;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: 20px;
+  }
+  body #bloc_page nav ul li a span {
+    top: 0px;
+  }
+  body #bloc_page nav ul li a .icone {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: absolute;
+    top: 23px;
+    left: 96px;
+  }
+  body #bloc_page #bloc_page {
+    max-width: 1440px;
+  }
+  body #bloc_page main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
+  body #bloc_page main h2 {
+    position: absolute;
+    top: 570px;
+  }
+  body #bloc_page main .restaurants {
+    width: 20%;
+  }
 }
 body ul {
   list-style-type: none;
@@ -190,6 +283,7 @@ main {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding-bottom: 80px;
+  width: 100%;
 }
 .subpage #title-container {
   width: 80%;
@@ -207,6 +301,11 @@ main {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.subpage #starter,
+.subpage #main-dish,
+.subpage #dessert {
+  width: 100%;
 }
 
 html {
@@ -317,7 +416,7 @@ nav li:hover {
 
 .dishes {
   height: 80px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   color: black;
   line-height: 13px;
@@ -410,8 +509,8 @@ nav li:hover {
   position: absolute;
   font-size: 1.5em;
   color: black;
-  top: 10px;
-  right: 50px;
+  top: 25px;
+  right: 20px;
 }
 .restaurants .description .far.fa-heart:hover {
   font-weight: bold;
@@ -451,6 +550,7 @@ header .main-img {
   width: 100%;
   height: 315px;
   margin-bottom: -50px !important;
+  position: relative;
   z-index: -1 !important;
 }
 header #title {

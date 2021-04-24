@@ -55,7 +55,7 @@ nav li {
 }
 
 .dishes {
-    @include button (80px, 100%, black, white, 15px, 13px);
+    @include button (80px, 90%, black, white, 15px, 13px);
     border-style: hidden;
     margin-bottom: 20px;
     box-shadow: 4px 10px 8px #c1c1c1;

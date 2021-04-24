@@ -50,7 +50,7 @@ main {
                 background-color: $color-third;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                text-overflow: hidden;
+                /*text-overflow: hidden;*/
 
                 .fas.fa-check-circle {
                     transform: rotate(-180deg);
@@ -72,15 +72,17 @@ main {
 
 $num-dishes: 12;
 $anim-dur: 1000ms;
-$anim-delay: 150ms;
+$anim-delay: 3150ms;
 
 .dishes {
     animation: apparition $anim-dur;
 
     @for $i from 1 through $num-dishes {
         &--#{$i} {
-            animation-delay: $anim-delay * $i;
+            animation-delay: $anim-delay ;
         }
+        
+        $anim-delay: $anim-delay + 150ms; 
     }
 }
 
@@ -110,6 +112,7 @@ $anim-delay: 150ms;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -999 !important;
 }
 
@@ -139,9 +142,10 @@ $anim-delay: 150ms;
 #bloc_page {
     background-color: white;
     z-index: -99 !important;
+    position: relative;
     visibility: hidden;
     animation: spinner ease-out;
-    animation-delay: 5s;
+    animation-delay: 3s;
     animation-duration: 100ms;
     animation-fill-mode: both;
 }
@@ -149,6 +153,6 @@ $anim-delay: 150ms;
 @keyframes spinner {
 
     to {
-       visibility: visible;
+        visibility: visible;
     }
 }
