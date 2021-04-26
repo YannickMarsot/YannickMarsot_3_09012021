@@ -109,8 +109,11 @@ $break-large: 1024px;
 
                 .dishes {
                     width: 85%;
+
                     .description {
                         overflow: auto;
+                        overflow-x: hidden;
+
                         .prix {
                             top: 95px;
                             left: 0px;
