@@ -96,7 +96,7 @@ $break-large: 1024px;
                 .far.fa-heart {
                     font-size: 4.5em;
                     top: -75px;
-                    right: 103px;
+                    right: 53%;
                 }
 
                 h2 {
@@ -109,12 +109,19 @@ $break-large: 1024px;
 
                 .dishes {
                     width: 85%;
+                    .description {
+                        overflow: auto;
+                        .prix {
+                            top: 95px;
+                            left: 0px;
+                        }
+                    }
                 }
 
                 #shop {
                     position: absolute;
-                    left: 10px;
-                    top: 572px;
+                    left: 1%;
+                    top: 300px;
                 }
             }
         }

@@ -49,12 +49,13 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   font-size: 1.5em;
   margin-right: 5px;
   margin-left: 5px;
-  line-height: 80px;
+  line-height: 90px;
 }
 
 /*-- animation menu qui apparaissent --*/
 .dishes {
   animation: apparition 1000ms;
+  animation-fill-mode: both;
 }
 .dishes--1 {
   animation-delay: 3150ms;
@@ -254,7 +255,7 @@ body #bloc_page {
   body #bloc_page .subpage .far.fa-heart {
     font-size: 4.5em;
     top: -75px;
-    right: 103px;
+    right: 53%;
   }
   body #bloc_page .subpage h2 {
     top: -40px;
@@ -265,10 +266,17 @@ body #bloc_page {
   body #bloc_page .subpage .dishes {
     width: 85%;
   }
+  body #bloc_page .subpage .dishes .description {
+    overflow: auto;
+  }
+  body #bloc_page .subpage .dishes .description .prix {
+    top: 95px;
+    left: 0px;
+  }
   body #bloc_page .subpage #shop {
     position: absolute;
-    left: 10px;
-    top: 572px;
+    left: 1%;
+    top: 300px;
   }
 }
 body ul {
@@ -319,7 +327,7 @@ main {
   font-size: 1.5em;
   color: black;
   top: 20px;
-  right: 10px;
+  right: -8px;
 }
 .subpage #title-container .far.fa-heart:hover {
   font-weight: bold;
@@ -440,7 +448,7 @@ nav li:hover {
 }
 
 .dishes {
-  height: 80px;
+  height: 90px;
   width: 100%;
   text-align: center;
   color: black;
