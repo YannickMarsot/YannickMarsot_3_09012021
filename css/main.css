@@ -194,6 +194,9 @@ body #bloc_page {
   }
 }
 @media only screen and (min-width: 1024px) {
+  body #bloc_page #bloc_page {
+    max-width: 1440px;
+  }
   body #bloc_page nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -227,9 +230,6 @@ body #bloc_page {
     top: 23px;
     left: 96px;
   }
-  body #bloc_page #bloc_page {
-    max-width: 1440px;
-  }
   body #bloc_page main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -246,7 +246,32 @@ body #bloc_page {
     top: 570px;
   }
   body #bloc_page main .restaurants {
-    width: 20%;
+    width: 85%;
+    margin-left: 25px;
+  }
+  body #bloc_page .subpage h1 {
+    position: absolute;
+    top: -200px;
+    left: 10px;
+  }
+  body #bloc_page .subpage .far.fa-heart {
+    font-size: 4.5em;
+    top: -75px;
+    right: 103px;
+  }
+  body #bloc_page .subpage h2 {
+    top: -40px;
+  }
+  body #bloc_page .subpage .underline {
+    top: -9px;
+  }
+  body #bloc_page .subpage .dishes {
+    width: 85%;
+  }
+  body #bloc_page .subpage #shop {
+    position: absolute;
+    left: 10px;
+    top: 572px;
   }
 }
 body ul {
@@ -259,6 +284,7 @@ body a {
 
 main {
   background-color: #F6F6F6;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +331,7 @@ main {
 .subpage #starter,
 .subpage #main-dish,
 .subpage #dessert {
-  width: 100%;
+  width: 90%;
 }
 
 html {
@@ -416,7 +442,7 @@ nav li:hover {
 
 .dishes {
   height: 80px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   color: black;
   line-height: 13px;
@@ -469,8 +495,15 @@ nav li:hover {
   color: white;
 }
 
-.restaurants {
+main {
+  width: 100%;
+}
+main a {
   width: 85%;
+}
+
+.restaurants {
+  width: 100%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 4px 10px 8px #c1c1c1;

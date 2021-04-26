@@ -1,5 +1,13 @@
+main {
+    width: 100%;
+
+    a {
+        width: 85%;
+    }
+}
+
 .restaurants {
-    width: 85%;
+    width: 100%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 4px 10px 8px #c1c1c1;
@@ -13,7 +21,7 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
-    
+
     span {
         position: absolute;
         top: 10px;
@@ -44,6 +52,7 @@
             color: black;
             top: 25px;
             right: 20px;
+
             &:hover {
                 font-weight: bold;
                 background: linear-gradient(#9356DC, #FF79DA);
@@ -51,9 +60,8 @@
                 -webkit-background-clip: text;
             }
 
-        } 
+        }
 
-    
+
     }
 }
-

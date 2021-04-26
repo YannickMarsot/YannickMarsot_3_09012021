@@ -44,6 +44,10 @@ $break-large: 1024px;
         @media only screen and (min-width: $break-large) {
             @content;
 
+            #bloc_page {
+                max-width: 1440px;
+            }
+
             nav {
                 ul {
                     @include flex (row);
@@ -68,27 +72,53 @@ $break-large: 1024px;
                     }
                 }
             }
-            
-            #bloc_page {
-                max-width: 1440px;
-            }
-            
+
             main {
                 @include flex (row);
                 justify-content: space-around;
                 padding-top: 50px;
-                
+
                 h2 {
                     position: absolute;
                     top: 570px;
                 }
-                
+
                 .restaurants {
-                    width: 20%;
+                    width: 85%;
+                    margin-left: 25px;
                 }
-                
-                .subpage {
-                    
+            }
+
+            .subpage {
+
+                h1 {
+                    position: absolute;
+                    top: -200px;
+                    left: 10px;
+                }
+
+                .far.fa-heart {
+                    font-size: 4.5em;
+                    top: -75px;
+                    right: 103px;
+                }
+
+                h2 {
+                    top: -40px;
+                }
+
+                .underline {
+                    top: -9px;
+                }
+
+                .dishes {
+                    width: 85%;
+                }
+
+                #shop {
+                    position: absolute;
+                    left: 10px;
+                    top: 572px;
                 }
             }
         }

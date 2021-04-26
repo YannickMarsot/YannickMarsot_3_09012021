@@ -21,6 +21,7 @@ body {
 
 main {
     background-color: #F6F6F6;
+    width: 100%;
     @include flex (column, center);
 }
 
@@ -52,6 +53,6 @@ main {
     #starter,
     #main-dish,
     #dessert {
-        width: 100%;
+        width: 90%;
     }
 }
