@@ -139,7 +139,7 @@ main a .dishes .icone-animation .fas.fa-check-circle {
 }
 #bloc_page {
   background-color: white;
-  z-index: -99 !important;
+  z-index: 1;
   position: relative;
   visibility: hidden;
   animation: spinner ease-out;
@@ -154,7 +154,7 @@ main a .dishes .icone-animation .fas.fa-check-circle {
   }
 }
 body #bloc_page {
-  /*max-width: $break-small;*/
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -194,9 +194,6 @@ body #bloc_page {
   }
 }
 @media only screen and (min-width: 1024px) {
-  body #bloc_page #bloc_page {
-    max-width: 1440px;
-  }
   body #bloc_page nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -298,6 +295,8 @@ main {
 }
 
 .subpage {
+  position: relative;
+  z-index: 3;
   background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -584,7 +583,7 @@ header .main-img {
   height: 315px;
   margin-bottom: -50px !important;
   position: relative;
-  z-index: -1 !important;
+  z-index: 2 !important;
 }
 header #title {
   width: 100%;

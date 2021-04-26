@@ -1,7 +1,7 @@
 body {
 
     #bloc_page {
-        /*max-width: $break-small;*/
+        max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
         @include respond-to (handhelds);
@@ -26,6 +26,8 @@ main {
 }
 
 .subpage {
+    position: relative;
+    z-index: 3;
     background-color: #F6F6F6;
     @include flex (column);
     border-top-left-radius: 30px;

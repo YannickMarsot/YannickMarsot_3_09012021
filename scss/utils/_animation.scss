@@ -141,7 +141,7 @@ $anim-delay: 3150ms;
 
 #bloc_page {
     background-color: white;
-    z-index: -99 !important;
+    z-index: 1;
     position: relative;
     visibility: hidden;
     animation: spinner ease-out;
